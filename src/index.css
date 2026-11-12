@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Moving LGM Logo Animations */
+  @keyframes lgm-orbit-cw {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes lgm-orbit-ccw {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes lgm-latex-drip {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    35% {
+      transform: translateY(-0.8px) scale(0.98, 1.02);
+    }
+    68% {
+      transform: translateY(3px) scale(1.06, 0.94);
+    }
+    85% {
+      transform: translateY(0.5px) scale(0.99, 1.01);
+    }
+  }
+
+  @keyframes lgm-ripple-wave {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.9;
+    }
+    60% {
+      opacity: 0.45;
+    }
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes lgm-leaf-sway-left {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-3deg);
+    }
+  }
+
+  @keyframes lgm-leaf-sway-right {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes lgm-leaf-sway-center {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-2px) scale(1.03);
+    }
+  }
+
+  @keyframes lgm-sheen-sweep {
+    0% {
+      transform: translateX(-160%) rotate(25deg);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.8;
+    }
+    35% {
+      transform: translateX(260%) rotate(25deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(260%) rotate(25deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes lgm-text-gold-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes lgm-beacon-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+  }
+
+  @keyframes lgm-glow-breath {
+    0%, 100% {
+      filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.3)) drop-shadow(0 0 10px rgba(245, 158, 11, 0.2));
+    }
+    50% {
+      filter: drop-shadow(0 0 9px rgba(16, 185, 129, 0.65)) drop-shadow(0 0 20px rgba(245, 158, 11, 0.5));
+    }
+  }
+
+  .animate-lgm-orbit-slow {
+    animation: lgm-orbit-cw 20s linear infinite;
+    transform-origin: 50px 50px;
+  }
+
+  .animate-lgm-orbit-fast {
+    animation: lgm-orbit-cw 5s linear infinite;
+    transform-origin: 50px 50px;
+  }
+
+  .animate-lgm-orbit-counter {
+    animation: lgm-orbit-ccw 26s linear infinite;
+    transform-origin: 50px 50px;
+  }
+
+  .animate-lgm-latex {
+    animation: lgm-latex-drip 3.2s ease-in-out infinite;
+    transform-origin: 50px 60px;
+  }
+
+  .animate-lgm-leaf-left {
+    animation: lgm-leaf-sway-left 5s ease-in-out infinite;
+    transform-origin: 48px 52px;
+  }
+
+  .animate-lgm-leaf-right {
+    animation: lgm-leaf-sway-right 5.5s ease-in-out infinite;
+    transform-origin: 52px 52px;
+  }
+
+  .animate-lgm-leaf-center {
+    animation: lgm-leaf-sway-center 4.2s ease-in-out infinite;
+    transform-origin: 50px 50px;
+  }
+
+  .animate-lgm-glow {
+    animation: lgm-glow-breath 4s ease-in-out infinite;
+  }
+
+  .animate-lgm-sheen {
+    animation: lgm-sheen-sweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .animate-lgm-gold-text {
+    background-size: 200% auto;
+    animation: lgm-text-gold-flow 4s ease infinite;
+  }
+
+  .animate-lgm-beacon {
+    animation: lgm-beacon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}

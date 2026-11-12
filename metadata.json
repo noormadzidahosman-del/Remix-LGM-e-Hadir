@@ -1,0 +1,8 @@
+{
+  "name": "Remix LGM e-Hadir - Pengesahan Mesyuarat Pantas",
+  "description": "Sistem Pengesahan Kehadiran Mesyuarat Pantas (One-Click RSVP) untuk Pengarah \u0026 Ketua Unit Lembaga Getah Malaysia (LGM).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
